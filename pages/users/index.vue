@@ -27,6 +27,7 @@ export default {
         }
       `,
       update: data => data.userMany,
+      prefetch: true,
     },
   },
 };

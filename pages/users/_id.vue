@@ -13,6 +13,7 @@ export default {
       query: gql`
         query($id: MongoID!) {
           userById(_id: $id) {
+            _id
             name
             age
             # languages
@@ -30,12 +31,14 @@ export default {
         return { id: this.$route.params.id };
       },
 
+      prefetch: ({ route }) => ({ id: route.params.id }),
+
       update: data => data.userById,
     },
   },
 
   mounted() {
-    console.log(this.user);
+    // console.log(this.user);
   },
 };
 </script>
