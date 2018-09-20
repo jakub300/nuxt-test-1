@@ -1,4 +1,13 @@
 module.exports = {
+  modules: ['@nuxtjs/apollo'],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://graphql-compose.herokuapp.com/user/',
+      },
+    },
+  },
   /*
   ** Headers of the page
   */
